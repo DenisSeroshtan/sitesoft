@@ -1,12 +1,12 @@
 {
-  "name": "optimizedhtml",
+  "name": "landing page",
   "version": "2.0.1",
-  "description": "OptimizedHTML - Start HTML Template",
+  "description": "sitesoft",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "WebDesign Master",
+  "author": "Denis Seroshtan",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.23.1",

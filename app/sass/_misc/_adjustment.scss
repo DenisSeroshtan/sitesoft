@@ -1,0 +1,109 @@
+
+$color-link: #fff;
+
+//style
+html{
+	box-sizing: border-box;
+	font-size: 16px;
+	@include tablets {
+		font-size: 15px;
+	}
+
+	@include phones {
+		font-size: 14px;
+	}
+
+}
+
+html {
+	width: 100%;
+	min-height: 100%;
+}
+
+*, *:before, *:after{
+	box-sizing: inherit;
+}
+body {
+	min-height: 100%;
+	line-height: 1.42;
+	@include font-family;
+	color: #000;
+	overflow-x: hidden;
+	-webkit-font-smoothing: antialiased;
+}
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	position: relative;
+	min-width: 480px;
+}
+
+
+li {
+	list-style: none;
+}
+
+ul, p {
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	display: inline-block;
+	text-decoration: none;
+	color: $color-link;
+	&:focus {
+		text-decoration: none;
+		color: inherit;
+	}
+	&:hover {
+		text-decoration: none;
+		color: inherit;
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	line-height: 1.4;
+	text-transform: uppercase;
+	font-weight: normal;
+	margin: 0;
+}
+//reset input
+input,
+label,
+select,
+button,
+textarea
+{
+	margin:0;
+	border:0;
+	padding:0;
+	display:inline-block;
+	vertical-align:middle;
+	white-space:normal;
+	background:none;
+	line-height:1;
+	font-size:13px;
+
+}
+button {
+	cursor: pointer;
+}
+button:focus, input:focus, select:focus {
+	outline:0;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0
+}
+
+td,
+th {
+	padding: 0
+}
+

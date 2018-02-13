@@ -1,0 +1,10 @@
+{
+  "name": "sitesoft",
+  "description": "landing",
+  "main": "index.html",
+  "authors": [
+    "DenisSeroshtan"
+  ],
+  "license": "MIT",
+  "homepage": ""
+}

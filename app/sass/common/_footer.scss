@@ -1,0 +1,44 @@
+.footer {
+	background: $darkBlue;
+}
+.header-top {
+	&.footer {
+		padding: rem(40px) 0;
+		color: rgba(#fff, .65);
+		.logo__svg {
+			fill: rgba(#fff, .65);
+		}
+		.nav__item.active {
+			text-decoration: none;
+		}
+		.nav__link {
+			color:  rgba(#fff, .65);
+		}
+		.phone-number {
+			color:  rgba(#fff, .65);
+		}
+		.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after{
+			background: rgba(#fff, .65);
+		}
+		.nav__list {
+			top: auto;
+			bottom: 100%
+		}
+	}
+}
+.footer__bottom {
+	background: #1F2B3A;
+	min-height: rem(37px);
+}
+.top__arrow {
+	display: flex;
+	width: 100%;
+	min-height: rem(37px);
+	@include icon-pseudo($icon-angle-double-up){
+		margin: auto;
+		font-size: rem(15px);
+		width:  rem(15px);
+		height: rem(15px);
+		color: #b1b1b1;
+	}
+}

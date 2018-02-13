@@ -1,0 +1,34 @@
+//color
+$accent: #ffeb3b;
+//$darkBlue: #2c3949;
+//$lightBlue: #394b5f;
+//$bg: #f9f9f9;
+//$cardBg: #e5e5e5;
+$fontawesome_path: '../fonts/fontawesome';
+
+
+
+//common style
+@import "../libs/bootstrap-grid/bootstrap-grid";
+@import "_misc/mixins";
+@import "_misc/fonts";
+@import "_misc/adjustment";
+@import "_misc/font-awesome";
+
+
+// animation
+//@import "_misc/preloader";
+//@import "common/hamburger";
+//@import "common/popup";
+
+//section
+@import "common/header";
+//@import "common/rating";
+//@import "common/deals";
+//@import "common/account";
+//@import "common/advantages";
+//@import "common/work";
+//@import "common/contacts";
+//@import "common/reviews";
+//@import "common/about";
+//@import "common/footer";
