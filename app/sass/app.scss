@@ -14,16 +14,18 @@ $fontawesome_path: '../fonts/fontawesome';
 @import "_misc/fonts";
 @import "_misc/adjustment";
 @import "_misc/font-awesome";
+//libs
+@import "../libs/mySlider/mySlider.min.css";
 
 
 // animation
 //@import "_misc/preloader";
-//@import "common/hamburger";
+@import "common/hamburger";
 //@import "common/popup";
 
 //section
 @import "common/header";
-//@import "common/rating";
+@import "common/news";
 //@import "common/deals";
 //@import "common/account";
 //@import "common/advantages";

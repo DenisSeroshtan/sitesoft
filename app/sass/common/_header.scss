@@ -7,9 +7,12 @@
 	width: 100%;
 	min-height: rem(760px);
 	@include bg-cover('../img/header_bg.jpg');
+	padding: rem(50px) 0 rem(30px) 0;
+	.container {
+		position: relative;
+	}
 }
 .header-top {
-	padding-top: 50px;
 }
 .logo {
 
@@ -17,24 +20,51 @@
 .logo__link {
 	color: $accent;
 }
+.hamburger {
+	float: right;
+	display: none;
+	@include laptop {
+		display: block;
+		margin-top: -10px;
+	}
+}
 .nav {
-
+	@include laptop {
+		display: none;
+		z-index: 1000;
+		//display: none;
+		position: absolute;
+		top: 100%;
+		right: 0;
+		width: 30%;
+		background: darken($accent, 30%);
+		padding: 10px 0;
+	}
 }
 .nav__list {
 	text-align: right;
+	@include laptop {
+		text-align: left;
+	}
 }
 .nav__item {
 	position: relative;
 	display: inline-block;
 	padding-left: 30px;
-	&:first-child {
-		padding-left: 0;
-	}
+	//&:first-child {
+	//	padding-left: 0;
+	//}
+	@include laptop {
+		display: block;
+		margin-top: 10px;
 
+
+	}
 }
 
 
 .menu__list {
+
 	position: absolute;
 	top: -9999em;
 	left: 20%;
@@ -42,7 +72,10 @@
 	background: $accent;
 	z-index: 1000;
 	padding: 5px 15px;
-
+	@include laptop() {
+		left: auto;
+		right: 100%;
+	}
 
 	@include pseudo() {
 		width: 100%;
@@ -68,9 +101,16 @@
 }
 .nav__item-menu {
 	position: relative;
-
-
 	@include pseudo(after) {
+
+		@include laptop {
+			left: 0;
+			margin-left: 10px;
+			border-width: 4px 6px 4px 0;
+			border-color: transparent #fff transparent transparent;
+			top: 50%;
+			transform: translateY(-50%);
+		}
 		width: 0;
 		height: 0;
 		position: absolute;
@@ -81,14 +121,27 @@
 		border-color: #ffffff transparent transparent transparent;
 	}
 	&:hover {
+
 		color: red;
 		.menu__list {
 			top: 30px;
+			@include laptop {
+				top: 50%;
+			}
 		}
 		.nav__item-link {
 			color: black;
 		}
 		&:after {
+			@include laptop {
+				left: 0;
+				margin-left: 10px;
+				border-width: 4px 0 4px 6px;
+				border-color: transparent transparent transparent #000;
+				top: 50%;
+				transform: translateY(-50%);
+
+			}
 			border-width: 0 4.5px 6px 4.5px;
 			border-color: transparent transparent #000 transparent;
 		}
@@ -122,16 +175,21 @@
 .btn {
 	padding: rem(15px);
 	background: $accent;
-	border-radius: 10px;
 	font-size: rem(30px);
   color: #000;
+	border-radius: 14px;
+	box-shadow: 0 14px 24px rgba(0, 0, 0, 0.45);
+	transition: background .25s ease;
+	&:hover {
+		background: lighten($accent, 5%);
+	}
 }
 .btn-header {
 }
 .header-bottom {
 	text-align: center;
-
 }
+
 .header-bottom__text {
 	display: inline-block;
 	position: relative;
@@ -139,10 +197,15 @@
 	color: white;
 	@include font-family;
 	font-size: 13px;
+	@include phones {
+		width: 80%;
+	}
 	@include pseudo(after, "*") {
 		position: absolute;
 		font-size: 37px;
-		top: -100%;
-		right: -20px;
+		top: 50%;
+		transform: translateY(-50%);
+		right: rem(-20px);
 	}
 }
+//-_-_-_-_-_-_-_-_-_-_-_-_-/mobile menu/_-_-_-_-_-_-_-_-_-_-_-_-//

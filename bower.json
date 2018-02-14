@@ -6,5 +6,9 @@
     "DenisSeroshtan"
   ],
   "license": "MIT",
-  "homepage": ""
+  "homepage": "",
+  "dependencies": {
+    "equalheights": "equalHeights#*",
+    "jQuery": "2.2.4"
+  }
 }
