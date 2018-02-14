@@ -2,6 +2,7 @@
 $accent: #ffeb3b;
 $pink: #f50057;
 $white:  #cfd8dc;
+$blue:  #84a1ad;
 
 $fontawesome_path: '../fonts/fontawesome';
 
@@ -15,22 +16,11 @@ $fontawesome_path: '../fonts/fontawesome';
 @import "_misc/font-awesome";
 //libs
 @import "../libs/mySlider/mySlider.min.css";
-
-
-// animation
-//@import "_misc/preloader";
 @import "common/hamburger";
-//@import "common/popup";
 
 //section
 @import "common/header";
 @import "common/news";
 @import "common/content";
 @import "common/form";
-//@import "common/account";
-//@import "common/advantages";
-//@import "common/work";
-//@import "common/contacts";
-//@import "common/reviews";
-//@import "common/about";
-//@import "common/footer";
+@import "common/footer";

@@ -1,15 +1,22 @@
 $(function() {
+ /*=================
+     equal heights for block
+ =================*/
+
   $('.news__item').equalHeights();
 
+/*=================
+    slider news section
+=================*/
   $('.features__slider').mySlider({
     buttons: false,
     autoSlide: true,
     duration: 3000
   });
 
-     /*=================
-      accordeon
-      =================*/
+/*=================
+    accordeon features
+=================*/
   $(".acco__title").on('click', function (e) {
     e.preventDefault();
 
@@ -38,10 +45,24 @@ $(function() {
       $this.toggleClass('is-active');
     })
   })();
-
-
-
-
+/*=================
+    smooth scroll to header
+=================*/
+  $('a[href^="#js"]').on('click', function(e) {
+    e.preventDefault();
+    var target = $(this).attr('href');
+    $('html, body').animate({
+      scrollTop: $(target).offset().top
+    }, 'slow', 'swing');
+  });
+/*=================
+    slider footer
+=================*/
+  $('.footer__slider').mySlider({
+    buttons: true,
+    dots: false,
+    btnArray: ['',''],
+  });
 
 
 });

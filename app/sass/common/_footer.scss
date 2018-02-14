@@ -1,44 +1,238 @@
-.footer {
-	background: $darkBlue;
+.footer-top {
+	width: 100%;
+	background: #0f1a1f;
+	position: relative;
+
+	@include font-family(slab);
+	color: $blue;
+	line-height: 1;
+
+	@include pseudo() {
+		display: block;
+		width: 100%;
+		height: 4px;
+		background-image: linear-gradient(to left, #ffeb3b 0%, #f50057 100%);
+	}
 }
-.header-top {
-	&.footer {
-		padding: rem(40px) 0;
-		color: rgba(#fff, .65);
-		.logo__svg {
-			fill: rgba(#fff, .65);
+
+.address {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.phone {
+	padding-top: 24px;
+	padding-bottom: 24px;
+	font-size: 24px;
+
+	white-space: nowrap;
+	@include laptop {
+		font-size: 18px;
+	}
+	@include tablets {
+		padding-top: 10px;
+		padding-bottom: 10px;
+		text-align: right;
+	}
+	@include phones {
+		font-size: 16px;
+	}
+
+	@include icon-pseudo($icon-phone) {
+		margin-right: rem(5px);
+	}
+
+}
+
+.social__list {
+	text-align: right;
+	padding-top: 29px;
+	padding-bottom: 29px;
+	@include tablets {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
+}
+
+.social__item {
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 18px;
+	@include laptop {
+		margin-left: 16px;
+	}
+
+	&:first-child {
+		margin-left: 0;
+	}
+}
+
+.social__item-link {
+	color: $blue;
+	//width: 21px;
+	//height: 21px;
+	font-size: rem(24px);
+	transition: opacity .25s ease;
+	@include laptop {
+		font-size: 21px;
+	}
+	@include tablets {
+		font-size: 26px;
+	}
+	&:hover {
+		opacity: .8;
+	}
+	&.tw {
+		@include icon-pseudo($icon-twitter-square)
+	}
+	&.youtube {
+		@include icon-pseudo($icon-youtube-square)
+	}
+	&.behance {
+		@include icon-pseudo($icon-behance-square)
+	}
+}
+
+.top {
+	text-align: right;
+	@include tablets {
+		text-align: center;
+	}
+}
+
+.top__link {
+	color: #000;
+	padding-top: 24px;
+	padding-bottom: 24px;
+	@include icon-pseudo($icon-chevron-up) {
+		font-weight: bold;
+		font-size: 30px;
+	}
+	@include tablets {
+		padding-top: 0px;
+		padding-bottom: 0px;
+		font-size: 20px;
+	}
+
+}
+
+//-_-_-_-_-_-_-_-_-_-_-_-_-/footer bottom/_-_-_-_-_-_-_-_-_-_-_-_-//
+.footer-mid {
+	background: #00070a;
+	.container {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+}
+
+.footer__menu-title {
+	@include font-family(bold);
+	color: $blue;
+	margin-bottom: 20px;
+}
+
+.footer__search {
+	padding-top: 42px;
+	@include tablets {
+		padding-bottom: 15px;
+	}
+}
+
+.footer__menu-link {
+	@include font-family(bold);
+	transition: color .25s ease;
+
+	&.active {
+		color: $accent;
+	}
+	&:hover {
+		color: $accent;
+	}
+}
+
+.footer__slider-wrap {
+	min-height: 160px;
+	@include tablets {
+		margin-top: 15px;
+	}
+	@include phones {
+		width: 100%;
+	}
+}
+
+.slider__img {
+	min-height: 160px;
+	@include cover;
+}
+
+.footer__slider {
+	.mySlider__btn {
+		height: 100%;
+		z-index: 1000;
+		background: rgba(#000, .1);
+
+	}
+
+	.mySlider__btn-next {
+		left: auto;
+		right: 0;
+
+		@include icon-pseudo($icon-angle-right) {
+			font-size: 60px;
+			width: 20px;
+			height: 60px;
+			line-height: 1;
+			@include absolute-center;
+			font-weight: normal;
 		}
-		.nav__item.active {
+	}
+	.mySlider__btn-prev {
+		left: 0;
+		right: auto;
+		@include icon-pseudo($icon-angle-left) {
+			font-size: 60px;
+			width: 20px;
+			height: 60px;
+			line-height: 1;
+			@include absolute-center;
+		}
+	}
+}
+
+.footer-bottom {
+	font-size: 13px;
+	@include font-family(slab);
+	color: $blue;
+	@extend %clearfix;
+	margin-top: 36px;
+}
+.footer-bottom__left {
+	float: left;
+	width: 50%;
+	@include tablets {
+		float: none;
+		width: 100%;
+		text-align: center;
+		margin-bottom: 5px;
+
+	}
+	.bottom__text-link {
+		color: $blue;
+		text-decoration: underline;
+		&:hover {
 			text-decoration: none;
 		}
-		.nav__link {
-			color:  rgba(#fff, .65);
-		}
-		.phone-number {
-			color:  rgba(#fff, .65);
-		}
-		.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after{
-			background: rgba(#fff, .65);
-		}
-		.nav__list {
-			top: auto;
-			bottom: 100%
-		}
 	}
 }
-.footer__bottom {
-	background: #1F2B3A;
-	min-height: rem(37px);
-}
-.top__arrow {
-	display: flex;
-	width: 100%;
-	min-height: rem(37px);
-	@include icon-pseudo($icon-angle-double-up){
-		margin: auto;
-		font-size: rem(15px);
-		width:  rem(15px);
-		height: rem(15px);
-		color: #b1b1b1;
+.footer-bottom__right {
+	float: right;
+	width: 50%;
+	text-align: right;
+	@include tablets {
+		float: none;
+		width: 100%;
+		text-align: center;
 	}
+
 }
