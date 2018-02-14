@@ -27,6 +27,15 @@
 	font-style: normal;
 
 }
+@font-face {
+	font-family: 'robotolight';
+	src: url('../fonts/roboto-light-webfont.woff2') format('woff2'),
+	url('../fonts/roboto-light-webfont.woff') format('woff'),
+	url('../fonts/roboto-light-webfont.svg#robotolight') format('svg');
+	font-weight: normal;
+	font-style: normal;
+
+}
 
 
 
@@ -39,5 +48,8 @@
 	}
 	@if $style == italic {
 		font-family: 'robotoitalic';
+	}
+	@if $style == light {
+		font-family: 'robotolight';
 	}
 }

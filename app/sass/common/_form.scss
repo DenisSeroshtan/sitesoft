@@ -1,0 +1,177 @@
+.section__form {
+	background: #fafafa;
+	padding-bottom: 100px;
+}
+input, textarea, button, label {
+	font-size: 1rem;
+	line-height: 1.42;
+}
+.section-form__title {
+	font-size: 30px;
+	@include font-family(bold);
+	text-align: center;
+	margin-bottom: rem(72px);
+	@include tablets {
+		font-size: 25px;
+	}
+}
+label {
+	cursor: pointer;
+}
+.form {
+	font-size: 1rem;
+}
+.form__group {
+	margin-bottom: 22px;
+}
+.form__title {
+	font-size: 18px;
+	@include font-family(bold);
+	margin-bottom: 22px;
+	text-align: center;
+}
+.input__text {
+	width: 48%;
+	font-size: 22px;
+	padding: rem(15px);
+	border: 1px solid $white;
+	&:first-child {
+		margin-right: 3%;
+	}
+	@include phones {
+		width: 100%;
+		&:first-child {
+			margin-right: 0;
+			margin-bottom: 10px;
+		}
+	}
+
+	@include placeholder {
+		font-size: 22px;
+		@include font-family(light);
+		color:  $white;
+	}
+}
+.textarea {
+	width: 100%;
+	border: 1px solid $white;
+	padding: rem(15px);
+	font-size: 22px;
+	min-height: rem(180px);
+
+	margin-bottom: 22px;
+
+	@include placeholder {
+		font-size: 22px;
+		line-height: 1;
+		@include font-family(light);
+		color:  $white;
+	}
+}
+
+.form__group-radio {
+	display: inline-block;
+	width: 48%;
+	&:first-child {
+		margin-right: 3%;
+	}
+	@include phones {
+
+		width: 100%;
+		margin-bottom: 10px;
+		&:first-child {
+			margin-right: 0;
+		}
+	}
+
+}
+.form__group-check {
+	display: inline-block;
+	width: 65%;
+	margin-right: 4%;
+	@include desktop {
+		display: block;
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 10px;
+	}
+}
+
+.btn__wrap {
+	display: inline-block;
+	@include desktop {
+		width: 100%;
+		display: block;
+		text-align: center;
+	}
+}
+.form__btn {
+	padding-left: 60px;
+	padding-right: 60px;
+	box-shadow: none;
+	@include font-family(bold);
+}
+
+//-_-_-_-_-_-_-_-_-_-_-_-_-/style checkbox/_-_-_-_-_-_-_-_-_-_-_-_-//
+
+.form__check:not(checked) {
+	position: absolute;
+	opacity: 0;
+}
+
+.form__check:not(checked) + .check__text{
+	position: relative;
+	padding-left: 28px;
+}
+
+.form__check:not(checked) + .check__text:before{
+	content: "";
+	position: absolute;
+	width: 18px;
+	height: 18px;
+	border: 3px solid $pink;
+	background: #fff;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0;
+	margin-top: -2px;
+}
+
+.form__check:checked + .check__text:before{
+	content: "\f00c";
+	line-height: 10px;
+	font-size: 14px;
+	font-family: fontAwesome;
+	color: $pink;
+}
+.check__text {
+
+}
+//-_-_-_-_-_-_-_-_-_-_-_-_-/radio/_-_-_-_-_-_-_-_-_-_-_-_-//
+.input__radio:not(checked) {
+	position: absolute;
+	opacity: 0;
+}
+.input__radio:not(checked) + .radio__label{
+	position: relative;
+	padding-left: 28px;
+}
+.input__radio:not(checked) + .radio__label:before{
+	content: "";
+	position: absolute;
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+
+	border: 3px solid $pink;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0;
+	margin-top: -2px;
+
+}
+.input__radio:checked + .radio__label:before{
+	background: $pink;
+}
+
+

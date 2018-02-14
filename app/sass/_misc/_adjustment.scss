@@ -28,7 +28,7 @@ body {
 	line-height: 1.42;
 	@include font-family;
 	color: #000;
-	font-weight: 600;
+	//font-weight: 600;
 	overflow-x: hidden;
 	-webkit-font-smoothing: antialiased;
 }
@@ -107,4 +107,7 @@ td,
 th {
 	padding: 0
 }
-
+textarea {
+	resize: none;
+	outline: none;
+}

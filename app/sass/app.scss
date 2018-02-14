@@ -1,6 +1,7 @@
 //color
 $accent: #ffeb3b;
 $pink: #f50057;
+$white:  #cfd8dc;
 
 $fontawesome_path: '../fonts/fontawesome';
 
@@ -25,6 +26,7 @@ $fontawesome_path: '../fonts/fontawesome';
 @import "common/header";
 @import "common/news";
 @import "common/content";
+@import "common/form";
 //@import "common/account";
 //@import "common/advantages";
 //@import "common/work";
