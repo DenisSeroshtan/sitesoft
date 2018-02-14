@@ -7,9 +7,10 @@
 	width: 100%;
 	min-height: rem(760px);
 	@include bg-cover('../img/header_bg.jpg');
+	padding: rem(50px) 0 rem(30px) 0;
+
 }
 .header-top {
-	padding-top: 50px;
 }
 .logo {
 
@@ -122,16 +123,21 @@
 .btn {
 	padding: rem(15px);
 	background: $accent;
-	border-radius: 10px;
 	font-size: rem(30px);
   color: #000;
+	border-radius: 14px;
+	box-shadow: 0 14px 24px rgba(0, 0, 0, 0.45);
+	transition: background .25s ease;
+	&:hover {
+		background: lighten($accent, 5%);
+	}
 }
 .btn-header {
 }
 .header-bottom {
 	text-align: center;
-
 }
+
 .header-bottom__text {
 	display: inline-block;
 	position: relative;
@@ -142,7 +148,8 @@
 	@include pseudo(after, "*") {
 		position: absolute;
 		font-size: 37px;
-		top: -100%;
-		right: -20px;
+		top: 50%;
+		transform: translateY(-50%);
+		right: rem(-20px);
 	}
 }
