@@ -58,10 +58,15 @@
 }
 .icon__heart {
 	margin-right: 8px;
-	@include icon-pseudo($icon-heart, after);
+	@include icon-pseudo($icon-heart, after) {
+		margin-left: 3px;
+	};
+
 }
 .icon__like {
-	@include icon-pseudo($icon-thumbs-up, after)
+	@include icon-pseudo($icon-thumbs-up, after) {
+		margin-left: 3px;
+	}
 }
 .news__item-title {
 	font-size: 18px;
